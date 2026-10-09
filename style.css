@@ -74,8 +74,8 @@
   --heading: #212121;
   --text: #424242;
   --muted: #757575;
-  --container: 92.5rem;
-  font-size: clamp(12px, 0.843437vw, 16px);
+  --container: 1480px;
+  font-size: 16px;
   scroll-behavior: smooth;
 }
 
@@ -88,7 +88,7 @@ body {
   color: var(--text);
   background: #fff;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.125rem;
+  font-size: 18px;
   line-height: 1.4;
 }
 
@@ -102,13 +102,13 @@ h1, h2, h3, strong, b {
 
 h2 {
   color: var(--heading);
-  font-size: 2.6875rem;
-  line-height: 3rem;
+  font-size: 43px;
+  line-height: 48px;
 }
 
 h3 {
-  font-size: 1.375rem;
-  line-height: 1.625rem;
+  font-size: 22px;
+  line-height: 26px;
 }
 
 a {
@@ -148,11 +148,11 @@ ul {
 }
 
 section, #order-form {
-  scroll-margin-top: 2rem;
+  scroll-margin-top: 32px;
 }
 
 .container {
-  width: min(var(--container), calc(100% - 4rem));
+  width: min(var(--container), calc(100% - 64px));
   margin-inline: auto;
 }
 
@@ -178,12 +178,12 @@ section, #order-form {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.625rem;
-  min-height: 3.75rem;
-  padding: 1.3125rem 1.5rem;
-  border-radius: 0.5rem;
+  gap: 10px;
+  min-height: 60px;
+  padding: 21px 24px;
+  border-radius: 8px;
   color: #fff;
-  font-size: 1.125rem;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1;
   text-align: center;
@@ -191,21 +191,21 @@ section, #order-form {
 }
 
 .button .icon {
-  font-size: 0.875rem;
+  font-size: 14px;
 }
 
 .button-orange {
   background: var(--orange);
-  box-shadow: 0 1.25rem 2.5rem #fa63233d, 0 0.3125rem 0.625rem #fd725c38;
+  box-shadow: 0 20px 40px #fa63233d, 0 5px 10px #fd725c38;
 }
 
 .button-yellow {
   background: linear-gradient(95deg, #ffb800, #ff8a00);
-  box-shadow: 0 0.875rem 2rem #ffb20e4a, 0 0.3125rem 0.5rem #de97003d;
+  box-shadow: 0 14px 32px #ffb20e4a, 0 5px 8px #de97003d;
 }
 
 .site-header {
-  height: 4.75rem;
+  height: 76px;
   background: #fff;
 }
 
@@ -213,47 +213,71 @@ section, #order-form {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: min(91.0625rem, calc(100% - 4rem));
+  width: min(1457px, calc(100% - 64px));
   height: 100%;
   margin-inline: auto;
-  gap: 1rem;
+  gap: 16px;
 }
 
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 12px;
   flex-shrink: 0;
+  width: 197px;
+  height: 36px;
   color: var(--orange);
-  font-size: 1.944387rem;
+  font-size: 31.1102px;
   font-weight: 700;
   letter-spacing: -0.025em;
   line-height: 1.2;
 }
 
 .logo img {
-  width: 1.75rem;
-  height: 1.873537rem;
+  width: 28px;
+  height: 29.9766px;
 }
 
 .logo b {
-  letter-spacing: 0;
+  letter-spacing: -0.02em;
   color: var(--yellow);
+}
+
+.logo b i {
+  font-size: 25.4538px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.logo b span {
+  letter-spacing: -0.025em;
 }
 
 .delivery-address {
   display: flex;
   align-items: center;
-  gap: 0.5625rem;
+  gap: 9px;
   white-space: nowrap;
   line-height: 1.4;
 }
 
 .delivery-address > strong {
-  margin-right: 0.1875rem;
+  width: 83px;
+  margin-right: 3px;
+  line-height: 18px;
+}
+
+.delivery-address > .icon {
+  width: 14px;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .delivery-address > span:last-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  line-height: 25px;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -267,34 +291,44 @@ section, #order-form {
 }
 
 .nav-actions {
-  gap: 1.875rem;
+  gap: 30px;
   flex-shrink: 0;
   font-weight: 700;
 }
 
 .search-link {
-  gap: 0.5rem;
+  flex-shrink: 0;
+  gap: 8px;
+  width: 124px;
+  white-space: nowrap;
   line-height: 1;
+}
+
+.login-button .icon {
+  font-size: 16px;
 }
 
 .login-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.625rem;
-  min-width: 7.375rem;
-  height: 2.875rem;
-  border-radius: 0.5rem;
+  gap: 10px;
+  flex-shrink: 0;
+  width: 118px;
+  padding: 14px 24px;
+  white-space: nowrap;
+  height: 46px;
+  border-radius: 8px;
   color: #ffb800;
   background: #fff;
-  box-shadow: 0 1.25rem 2.5rem #ffae004a, 0 0.3125rem 0.625rem #ffae0042;
+  box-shadow: 0 20px 40px #ffae004a, 0 5px 10px #ffae0042;
   font-weight: 700;
   line-height: 1;
 }
 
 .hero {
   overflow: hidden;
-  height: 38.75rem;
+  height: 620px;
   background: #ffbd13 url('assets/images/hero-background.png') center / cover no-repeat;
 }
 
@@ -306,49 +340,58 @@ section, #order-form {
 .hero-copy {
   position: relative;
   z-index: 1;
-  width: 53.5rem;
-  margin-left: 0.90625rem;
-  padding-top: 8.25rem;
+  width: 856px;
+  margin-left: 14.5px;
+  padding-top: 132px;
 }
 
 .hero h1 {
   color: #fff;
-  font-size: 5.5rem;
+  font-size: 88px;
   line-height: 1;
-  text-shadow: 0 1.6875rem 5.125rem #ffae0047;
+  text-shadow: 0 27px 82px #ffae0047;
 }
 
 .hero-copy > p {
-  margin-top: 0.9375rem;
-  font-size: 1.375rem;
-  line-height: 1.625rem;
+  margin-top: 15px;
+  font-size: 22px;
+  line-height: 26px;
 }
 
 .order-form {
-  margin-top: 2rem;
+  margin-top: 32px;
   overflow: hidden;
-  border-radius: 1rem;
+  border-radius: 16px;
   background: #fff;
 }
 
 .order-tabs {
   display: flex;
-  gap: 0.5rem;
-  padding: 1.5rem;
-  border-bottom: 0.03rem solid #eee;
+  gap: 8px;
+  padding: 24px;
+  margin-bottom: 0.44px;
+  box-shadow: 0 0.44px #eee;
 }
 
 .order-tab {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.625rem;
-  padding: 0.625rem 1.5rem;
-  border-radius: 0.5rem;
+  gap: 10px;
+  padding: 10px 24px;
+  border-radius: 8px;
   color: var(--muted);
   background: transparent;
   font-weight: 700;
   line-height: 1;
+}
+
+.order-tab:first-child {
+  width: 148px;
+}
+
+.order-tab:last-child {
+  width: 129px;
 }
 
 .order-tab.active {
@@ -359,25 +402,26 @@ section, #order-form {
 .order-fields {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 1.5rem;
+  gap: 16px;
+  padding: 24px;
 }
 
 .address-field {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 12px;
   flex: 1;
   min-width: 0;
-  padding: 0.4375rem 1rem;
-  border-radius: 0.5rem;
+  height: 49px;
+  padding: 7px 16px;
+  border-radius: 8px;
   background: #f5f5f5;
 }
 
 .address-field .icon {
   color: #ff7474;
-  font-size: 1.5rem;
-  line-height: 1.4;
+  font-size: 24px;
+  line-height: 34px;
 }
 
 input {
@@ -387,7 +431,7 @@ input {
   color: var(--text);
   background: transparent;
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.125rem;
+  font-size: 18px;
   line-height: 1.4;
 }
 
@@ -398,15 +442,15 @@ input::placeholder {
 
 .find-button {
   flex-shrink: 0;
-  width: 12.4375rem;
+  width: 199px;
   background: linear-gradient(96deg, #ff7a7a, #f65900);
 }
 
 .hero-art {
   position: absolute;
-  top: 11.1744125rem;
-  right: -0.57195625rem;
-  width: 31.071096rem;
+  top: 178.791px;
+  right: -9.1513px;
+  width: 497.138px;
   aspect-ratio: 1;
   isolation: isolate;
 }
@@ -417,7 +461,7 @@ input::placeholder {
   z-index: -1;
   border-radius: 50%;
   background: #6a572659;
-  box-shadow: -2.5rem 2rem 4.75rem #7855004d;
+  box-shadow: -40px 32px 76px #7855004d;
   content: '';
 }
 
@@ -437,21 +481,21 @@ input::placeholder {
 }
 
 .flash-deals {
-  padding-block: 5rem;
+  padding-block: 80px;
 }
 
 .flash-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1rem;
-  max-width: 92.228333rem;
+  gap: 16px;
+  max-width: 1475.65332px;
 }
 
 .flash-photo {
   position: relative;
   overflow: hidden;
   aspect-ratio: 356.91333 / 301;
-  border-radius: 1rem;
+  border-radius: 16px;
 }
 
 .flash-photo > img, .restaurant-photo > img {
@@ -462,49 +506,52 @@ input::placeholder {
 
 .discount {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   display: flex;
   align-items: center;
-  height: 5.1875rem;
-  padding: 0.625rem 1.125rem;
-  border-radius: 0 2rem 0 0;
+  width: 140px;
+  height: 83px;
+  padding: 10px 18px;
+  border-radius: 0 32px 0 0;
   color: #fff;
   background: var(--yellow);
 }
 
 .discount > strong {
-  font-size: 4.25rem;
-  line-height: 0.91;
+  width: 73px;
+  font-size: 68px;
+  line-height: 62px;
 }
 
 .discount > span {
+  width: 31px;
   display: flex;
   flex-direction: column;
 }
 
 .discount b {
-  font-size: 2.1875rem;
-  line-height: 0.91;
+  font-size: 35px;
+  line-height: 32px;
 }
 
 .discount > span > span {
-  font-size: 1.375rem;
-  line-height: 1.2;
+  font-size: 22px;
+  line-height: 26px;
 }
 
 .flash-card h3 {
-  margin-top: 2rem;
-  margin-bottom: 0.875rem;
+  margin-top: 32px;
+  margin-bottom: 14px;
 }
 
 .badge {
   display: inline-block;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  font-size: 1.375rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 22px;
   font-weight: 700;
-  line-height: 1.625rem;
+  line-height: 26px;
 }
 
 .badge-orange {
@@ -518,7 +565,7 @@ input::placeholder {
 }
 
 .how-it-works {
-  padding-block: 5rem;
+  padding-block: 80px;
   background: linear-gradient(180deg, #ffce6738, #fdedca00);
   text-align: center;
 }
@@ -530,171 +577,190 @@ input::placeholder {
 .steps {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 2rem;
-  max-width: 82.75rem;
-  margin-top: 3.4375rem;
+  gap: 32px;
+  max-width: 1324px;
+  margin-top: 55px;
 }
 
 .step-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 7rem;
-  margin-bottom: 2.5625rem;
-  filter: drop-shadow(0 1.25rem 1.25rem #ffae004a) drop-shadow(0 0.3125rem 0.3125rem #ffae0042);
+  height: 112px;
+  margin-bottom: 41px;
+  filter: drop-shadow(0 20px 20px #ffae004a) drop-shadow(0 5px 5px #ffae0042);
 }
 
 .step-icon img {
   width: auto;
-  height: 7rem;
+  height: 112px;
 }
 
 .step p {
-  margin-top: 0.625rem;
+  margin-top: 10px;
   color: #9e9e9e;
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.5625rem;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .section-space {
-  padding-block: 5rem;
+  padding-block: 80px;
 }
 
 .section-space h2 {
   text-align: center;
 }
 
+.popular-items > .container {
+  --container: 1481px;
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: 5.5rem;
+  gap: 16px;
+  margin-top: 88px;
 }
 
 .product-photo {
   width: 100%;
   aspect-ratio: 283.4 / 283;
-  border-radius: 1rem;
+  border-radius: 16px;
   object-fit: cover;
 }
 
 .product-card h3 {
-  margin-top: 1rem;
+  margin-top: 16px;
 }
 
 .product-location {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
+  gap: 8px;
+  margin-top: 8px;
   color: var(--yellow);
-  font-size: 1.375rem;
-  line-height: 1.625rem;
+  font-size: 22px;
+  line-height: 26px;
 }
 
 .product-location .icon {
-  font-size: 1.125rem;
+  font-size: 18px;
 }
 
 .price {
-  margin-top: 0.5rem;
+  margin-top: 8px;
   color: var(--heading);
-  font-size: 1.375rem;
+  font-size: 22px;
   font-weight: 700;
-  line-height: 1.625rem;
+  line-height: 26px;
 }
 
 .product-card .button {
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 16px;
 }
 
 .restaurant-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 4rem 1rem;
-  margin-top: 5.5rem;
-  margin-inline: 0.125rem;
+  gap: 64px 16px;
+  margin-top: 88px;
+  margin-inline: 2px;
 }
 
 .restaurant-photo {
   position: relative;
   overflow: hidden;
   aspect-ratio: 357 / 301;
-  border-radius: 1rem;
+  border-radius: 16px;
 }
 
 .restaurant-labels {
   position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
+  top: 24px;
+  left: 24px;
   display: flex;
-  gap: 0.5rem;
+  gap: 8px;
   color: #fff;
-  font-size: 1.375rem;
+  font-size: 22px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 26px;
 }
 
 .restaurant-labels > span {
   display: inline-flex;
   align-items: center;
-  gap: 0.625rem;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 8px;
   background: var(--orange);
   white-space: nowrap;
 }
 
+.restaurant-labels > span:first-child {
+  width: 134px;
+}
+
 .restaurant-labels > span:last-child {
+  width: 101px;
   background: var(--yellow);
 }
 
 .restaurant-labels .icon {
-  font-size: 1.125rem;
+  font-size: 18px;
 }
 
 .restaurant-info {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  min-height: 4rem;
-  margin-top: 1.5rem;
+  gap: 24px;
+  min-height: 64px;
+  margin-top: 24px;
 }
 
 .restaurant-logo {
   flex-shrink: 0;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 0.5rem;
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+}
+
+.rating .icon {
+  width: 25px;
+  font-size: 22px;
+  line-height: 23px;
 }
 
 .rating {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  margin-top: 0.25rem;
+  gap: 8px;
+  margin-top: 4px;
   color: var(--yellow);
-  font-size: 1.375rem;
-  line-height: 1.625rem;
+  font-size: 22px;
+  line-height: 26px;
 }
 
 .restaurant-card > .badge {
-  margin-top: 2rem;
+  margin-top: 32px;
 }
 
 .view-all-button {
   display: flex;
-  width: 11.125rem;
-  margin: 5.5rem auto 0;
-  border-radius: 0.875rem;
+  width: 178px;
+  margin: 88px auto 0;
+  border-radius: 14px;
   background: linear-gradient(97deg, #ffba26, #ff9a0e);
-  box-shadow: 0 1.25rem 2.5rem #ffae004a, 0 0.3125rem 0.625rem #ffae0042;
+  box-shadow: 0 20px 40px #ffae004a, 0 5px 10px #ffae0042;
+}
+
+.search-food > .container {
+  --container: 1479px;
 }
 
 .search-food {
-  padding-block: 6.34375rem;
+  padding-block: 101.5px;
   background: #fefaf1;
 }
 
@@ -702,52 +768,54 @@ input::placeholder {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  min-height: 4.75rem;
+  min-height: 76px;
 }
 
 .category-controls {
   display: flex;
   align-items: center;
-  gap: 1.65625rem;
-  padding-right: 1.09375rem;
+  gap: 26.5px;
+  padding-right: 17.5px;
   color: var(--yellow);
   font-weight: 700;
 }
 
 .category-controls > a {
+  width: 83.5px;
+  white-space: nowrap;
   display: flex;
   align-items: center;
-  gap: 0.625rem;
+  gap: 10px;
 }
 
 .category-controls > a .icon {
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 .arrows {
   display: flex;
-  gap: 1rem;
+  gap: 16px;
 }
 
 .arrow {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 4.75rem;
-  height: 4.75rem;
+  width: 76px;
+  height: 76px;
   border: 1px solid #faaa01;
   border-radius: 50%;
   color: #fff;
   background: var(--yellow);
-  box-shadow: 0 0.875rem 2rem #ffb20e4a, 0 0.3125rem 0.5rem #de97003d;
-  font-size: 2.0625rem;
+  box-shadow: 0 14px 32px #ffb20e4a, 0 5px 8px #de97003d;
+  font-size: 33px;
 }
 
 .category-grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 2.1375rem;
-  margin-top: 2.8125rem;
+  gap: 34.2px;
+  margin-top: 45px;
 }
 
 .food-category {
@@ -763,80 +831,78 @@ input::placeholder {
 }
 
 .food-category h3 {
-  margin-top: 1.625rem;
+  margin-top: 26px;
 }
 
 .benefits {
-  padding-block: 7.5rem;
+  padding-block: 120px;
   background: #feefd0;
 }
 
 .benefit-card {
-  display: flex;
+  display: grid;
+  grid-template-columns: 318px 2px 282px 2px 296px;
   align-items: center;
-  justify-content: space-between;
-  width: min(76.875rem, calc(100% - 4rem));
-  min-height: 15.375rem;
+  gap: 55px;
+  width: min(1230px, calc(100% - 64px));
+  min-height: 246px;
   margin-inline: auto;
-  padding: 3.4375rem;
-  border-radius: 2.875rem;
+  padding: 55px;
+  border-radius: 46px;
   background: #fff;
-  box-shadow: 0 1.6875rem 5.125rem #ffae0047, 0 0.875rem 0.9375rem #ffae0003;
+  box-shadow: 0 27px 82px #ffae0047, 0 14px 15px #ffae0003;
 }
 
 .benefit {
   display: flex;
   align-items: center;
-  gap: 1.875rem;
+  gap: 30px;
   position: relative;
 }
 
-.benefit + .benefit::before {
-  position: absolute;
-  top: 1.25rem;
-  left: -3.5rem;
-  width: 0.125rem;
-  height: 6rem;
+.benefit-divider {
+  width: 2px;
+  height: 96px;
   background: #cfcfcf;
-  content: '';
 }
 
 .benefit > img {
-  width: 8.5rem;
-  height: 8.5rem;
+  flex-shrink: 0;
+  width: 136px;
+  height: 136px;
 }
 
 .benefit h3 {
   background: linear-gradient(95deg, #fb3c00, #ffb800);
   background-clip: text;
   color: transparent;
-  font-size: 2.1875rem;
-  line-height: 1.2;
+  font-size: 35px;
+  line-height: 42px;
 }
 
 .details {
-  padding-block: 7.5rem;
+  padding-block: 120px;
 }
 
 .detail-list {
   display: grid;
-  gap: 5rem;
+  gap: 80px;
 }
 
 .detail-card {
   display: grid;
-  grid-template-columns: 519fr 961fr;
+  grid-template-columns: 519px minmax(0, 1fr);
   overflow: hidden;
-  min-height: 32rem;
-  border-radius: 1rem;
-  box-shadow: 0 1.6875rem 5.125rem #7c7c7c47, 0 0.875rem 0.9375rem #7c7c7c0f;
+  min-height: 512px;
+  border-radius: 16px;
+  box-shadow: 0 27px 82px #7c7c7c47, 0 14px 15px #7c7c7c0f;
 }
 
 .detail-content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 3.5rem;
+  padding: 56px;
 }
 
 .detail-content > div {
@@ -844,11 +910,22 @@ input::placeholder {
   flex-direction: column;
   justify-content: center;
   flex: 1;
-  margin-bottom: 3rem;
+  margin-bottom: 48px;
 }
 
 .detail-content h2 {
   color: #353535;
+}
+
+.detail-content h2 .detail-title-line {
+  display: block;
+  color: inherit;
+}
+
+.detail-card:not(:first-child) .detail-content h2 {
+  color: #212121;
+  font-size: 48px;
+  line-height: 53px;
 }
 
 .detail-content h2 span {
@@ -856,11 +933,25 @@ input::placeholder {
 }
 
 .detail-content p {
-  margin-top: 1.1875rem;
+  margin-top: 19px;
   color: #616161b0;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
-  line-height: 1.5625rem;
+  line-height: 25px;
+}
+
+.detail-card:not(:first-child) .detail-content p {
+  color: #616161;
+  font-weight: 400;
+}
+
+.detail-content .button .icon {
+  font-size: 16px;
+}
+
+.detail-card-reverse .detail-content .button {
+  font-weight: 700;
+  text-transform: none;
 }
 
 .detail-content .button {
@@ -873,12 +964,12 @@ input::placeholder {
 .detail-photo {
   width: 100%;
   height: 100%;
-  min-height: 32rem;
+  min-height: 512px;
   object-fit: cover;
 }
 
 .detail-card-reverse {
-  grid-template-columns: 961fr 519fr;
+  grid-template-columns: minmax(0, 1fr) 519px;
 }
 
 .detail-card-reverse .detail-photo {
@@ -894,7 +985,7 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 25rem;
+  min-height: 400px;
   background-color: #ffb30e;
   background-image: url('assets/images/order-background.jpg');
   background-position: right 49.4096%;
@@ -904,48 +995,53 @@ input::placeholder {
 }
 
 .banner-content {
-  width: min(45.5rem, calc(100% - 3rem));
+  position: relative;
+  left: 0.5px;
+  width: min(728px, calc(100% - 48px));
 }
 
 .order-banner h2 {
   color: #fff;
-  font-size: 3.5625rem;
+  font-size: 57px;
   font-weight: 900;
-  line-height: 0.975;
+  line-height: 56px;
 }
 
 .banner-button {
-  margin-top: 3.875rem;
-  padding-inline: 1.5625rem;
+  position: relative;
+  left: -9.5px;
+  width: 233px;
+  margin-top: 62px;
+  padding-inline: 25px;
   background: linear-gradient(95deg, #f17228, #f15e28);
-  box-shadow: 0 0.875rem 2rem #ffb20e4a, 0 0.3125rem 0.5rem #de97003d;
+  box-shadow: 0 14px 32px #ffb20e4a, 0 5px 8px #de97003d;
   font-weight: 900;
   text-transform: uppercase;
 }
 
 .site-footer {
-  padding-block: 5.03125rem;
+  padding-block: 80.5px;
   color: #f5f5f5;
   background: #212121;
 }
 
 .top-cities {
-  padding-bottom: 3.75rem;
+  padding-bottom: 60px;
 }
 
 .city-grid {
   display: flex;
   justify-content: space-between;
-  margin-top: 2.5rem;
+  margin-top: 40px;
 }
 
 .city-grid li, .footer-menu li {
-  font-size: 1.125rem;
+  font-size: 18px;
   line-height: 1;
 }
 
 .city-grid li + li, .footer-menu li + li {
-  margin-top: 1rem;
+  margin-top: 16px;
 }
 
 .city-grid button {
@@ -954,74 +1050,78 @@ input::placeholder {
   background: transparent;
   line-height: inherit;
 }
+
 .footer-middle {
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 3rem;
-  padding-top: 1.875rem;
-  padding-bottom: 1.875rem;
-  border-top: 1px solid #424242;
+  gap: 48px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  box-shadow: inset 0 1px #424242;
 }
 
 .footer-menus {
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 2rem;
-  width: 37.9375rem;
+  gap: 32px;
+  width: 607px;
 }
 
 .footer-menu ul {
-  margin-top: 2.5rem;
+  margin-top: 40px;
 }
 
 .footer-subscription {
-  width: 30.1875rem;
+  width: 483px;
   color: #bbbbbb;
 }
 
 .footer-subscription > h3 {
-  font-size: 1.125rem;
+  font-size: 18px;
   text-transform: uppercase;
   opacity: 0.6;
-  line-height: 1.375rem;
+  line-height: 22px;
 }
 
 .social-icons {
   display: flex;
-  gap: 1rem;
-  margin-top: 2.5rem;
-  font-size: 1.5rem;
+  height: 24px;
+  gap: 16px;
+  margin-top: 40px;
+  font-size: 24px;
   line-height: 1;
 }
 
 .footer-subscription > p {
-  margin-top: 2.6875rem;
+  margin-top: 43px;
   color: #bbb;
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
-  line-height: 1.5625rem;
+  line-height: 25px;
 }
 
 .subscribe-form {
   display: flex;
-  gap: 1rem;
-  margin-top: 2.5rem;
+  gap: 16px;
+  margin-top: 40px;
 }
 
 .subscribe-form label {
   display: flex;
   align-items: center;
-  gap: 0.625rem;
+  gap: 10px;
   flex: 1;
   min-width: 0;
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
+  padding: 12px 16px;
+  border-radius: 8px;
   background: #424242;
 }
 
 .subscribe-form label .icon {
   color: #adadad;
-  font-size: 1.5rem;
+  font-size: 24px;
 }
 
 .subscribe-form input {
@@ -1033,7 +1133,7 @@ input::placeholder {
 }
 
 .subscribe-form .button {
-  width: 8.3125rem;
+  width: 133px;
   flex-shrink: 0;
 }
 
@@ -1041,29 +1141,33 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  min-height: 3.3125rem;
-  padding-top: 1rem;
-  padding-bottom: 1.1875rem;
-  border-top: 1px solid #424242;
+  gap: 16px;
+  min-height: 53px;
+  padding-top: 16px;
+  padding-bottom: 19px;
+  box-shadow: inset 0 1px #424242;
   font-family: 'Open Sans', sans-serif;
-  font-size: 0.9375rem;
+  font-size: 15px;
   line-height: 1.2;
+}
+
+.social-icons > span {
+  display: flex;
 }
 
 .footer-bottom p {
   display: flex;
   align-items: center;
-  gap: 0.625rem;
+  gap: 10px;
 }
 
 .footer-bottom p:last-child {
   font-family: 'Exo 2', sans-serif;
-  gap: 0.3rem;
+  gap: 4.8px;
 }
 
 .footer-bottom p:last-child strong {
-  margin-left: 0.2rem;
+  margin-left: 3.2px;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -1071,17 +1175,42 @@ input::placeholder {
   color: var(--yellow);
 }
 
-@media (max-width: 1100px) {
-  :root {
-    font-size: 14px;
+@media (min-width: 1543px) {
+  .search-food > .container {
+    position: relative;
+    left: -6px;
+  }
+}
+
+@media (max-width: 1293px) {
+  .benefit-card {
+    grid-template-columns: 1fr 2px 1fr 2px 1fr;
+    gap: 24px;
+    padding: 40px;
   }
 
+  .benefit {
+    gap: 16px;
+  }
+
+  .benefit > img {
+    width: 96px;
+    height: 96px;
+  }
+
+  .benefit h3 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+@media (max-width: 1100px) {
   .container, .nav-container {
-    width: calc(100% - 4rem);
+    width: calc(100% - 64px);
   }
 
   .delivery-address > span:last-child {
-    font-size: 0.85rem;
+    font-size: 14px;
   }
 
   .delivery-address > strong {
@@ -1094,67 +1223,49 @@ input::placeholder {
   }
 
   .hero h1 {
-    font-size: 4.5rem;
+    font-size: 72px;
   }
 
   .hero-art {
-    right: -4rem;
-    width: 30rem;
+    right: -64px;
+    width: 480px;
   }
 
   .hero-copy > p {
-    max-width: 28rem;
+    max-width: 448px;
   }
 
   .order-fields {
-    gap: 0.75rem;
-    padding: 1.25rem;
+    gap: 12px;
+    padding: 20px;
   }
 
   .find-button {
-    width: 10rem;
-    padding-inline: 0.75rem;
+    width: 160px;
+    padding-inline: 12px;
   }
 
   .restaurant-labels {
-    top: 1rem;
-    left: 0.75rem;
-    font-size: 1.125rem;
+    top: 16px;
+    left: 12px;
+    font-size: 18px;
+  }
+
+  .restaurant-labels > span:first-child, .restaurant-labels > span:last-child {
+    width: auto;
   }
 
   .restaurant-labels > span {
-    gap: 0.4rem;
-    padding: 0.5rem 0.625rem;
+    gap: 6.4px;
+    padding: 8px 10px;
   }
 
   .restaurant-info {
-    gap: 0.75rem;
+    gap: 12px;
   }
 
   .restaurant-info h3 {
-    font-size: 1.2rem;
-  }
-
-  .benefit-card {
-    padding: 2.5rem;
-  }
-
-  .benefit {
-    gap: 1rem;
-  }
-
-  .benefit > img {
-    width: 6rem;
-    height: 6rem;
-  }
-
-  .benefit h3 {
-    font-size: 1.75rem;
-  }
-
-  .benefit + .benefit::before {
-    top: 0;
-    left: -1.5rem;
+    font-size: 19.2px;
   }
 
   .detail-card, .detail-card-reverse {
@@ -1166,11 +1277,12 @@ input::placeholder {
   }
 
   .detail-content {
-    padding: 2.5rem;
+    padding: 40px;
   }
 
-  .detail-content h2 {
-    font-size: 2.4rem;
+  .detail-content h2, .detail-card:not(:first-child) .detail-content h2 {
+    font-size: 38px;
+    line-height: 44px;
   }
 
   .desktop-break {
@@ -1179,7 +1291,7 @@ input::placeholder {
 
   .footer-menus {
     width: 52%;
-    gap: 1rem;
+    gap: 16px;
   }
 
   .footer-subscription {
@@ -1187,21 +1299,17 @@ input::placeholder {
   }
 
   .subscribe-form {
-    gap: 0.5rem;
+    gap: 8px;
   }
 
   .subscribe-form .button {
-    width: 7rem;
+    width: 112px;
   }
 }
 
-@media (max-width: 800px) {
-  :root {
-    font-size: 16px;
-  }
-
+@media (max-width: 1000px) {
   .container, .nav-container {
-    width: calc(100% - 2.5rem);
+    width: calc(100% - 40px);
   }
 
   .site-header {
@@ -1210,16 +1318,21 @@ input::placeholder {
 
   .nav-container {
     flex-wrap: wrap;
-    gap: 1rem;
-    padding-block: 1rem;
+    gap: 16px;
+    padding-block: 16px;
   }
 
   .logo {
-    font-size: 1.6rem;
+    width: auto;
+    font-size: 25.6px;
   }
 
   .nav-actions {
-    gap: 1rem;
+    gap: 16px;
+  }
+
+  .delivery-address > span:last-child {
+    display: inline;
   }
 
   .delivery-address {
@@ -1231,126 +1344,136 @@ input::placeholder {
   }
 
   .search-link {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
   .login-button {
-    min-width: 5.75rem;
+    width: 92px;
+    padding-inline: 12px;
   }
 
   .hero {
     height: auto;
-    min-height: 42rem;
+    min-height: 672px;
   }
 
   .hero-copy {
     width: 100%;
-    padding-top: 3.5rem;
+    padding-top: 56px;
   }
 
   .hero h1 {
-    font-size: clamp(2.75rem, 7vw, 4.5rem);
+    font-size: clamp(44px, 7vw, 72px);
   }
 
   .hero-copy > p {
     max-width: none;
-    font-size: 1.2rem;
+    font-size: 19.2px;
   }
 
   .hero-art {
-    top: 25rem;
-    right: 1rem;
-    width: 25rem;
+    top: 400px;
+    right: 16px;
+    width: 400px;
   }
 
   .hero-inner {
-    min-height: 42rem;
+    min-height: 672px;
   }
 
   .order-form {
-    margin-top: 1.5rem;
+    margin-top: 24px;
   }
 
   .flash-grid, .steps, .restaurant-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2.5rem 1.25rem;
+    gap: 40px 20px;
   }
 
   .flash-deals, .how-it-works, .section-space, .search-food, .details, .benefits {
-    padding-block: 3.5rem;
+    padding-block: 56px;
   }
 
   h2 {
-    font-size: 2.125rem;
+    font-size: 34px;
     line-height: 1.12;
   }
 
   .flash-card h3 {
-    margin-top: 1.25rem;
+    margin-top: 20px;
   }
 
   .badge {
-    font-size: 1.125rem;
-    padding-inline: 0.75rem;
+    font-size: 18px;
+    padding-inline: 12px;
   }
 
   .discount {
-    height: 4rem;
-    padding: 0.5rem 0.875rem;
+    width: auto;
+    height: 64px;
+    padding: 8px 14px;
   }
 
   .discount > strong {
-    font-size: 3.25rem;
+    width: auto;
+    line-height: 48px;
+    font-size: 52px;
+  }
+
+  .discount > span {
+    width: auto;
   }
 
   .discount b {
-    font-size: 1.625rem;
+    line-height: 24px;
+    font-size: 26px;
   }
 
   .discount > span > span {
-    font-size: 1rem;
+    line-height: 19px;
+    font-size: 16px;
   }
 
   .steps {
-    gap: 3rem 2rem;
+    gap: 48px 32px;
   }
 
   .step-icon {
-    margin-bottom: 1.5rem;
+    margin-bottom: 24px;
   }
 
   .step p {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
   .product-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2.5rem 1rem;
+    gap: 40px 16px;
   }
 
   .product-grid, .restaurant-grid {
-    margin-top: 2.75rem;
+    margin-top: 44px;
   }
 
   .product-card h3, .product-location, .price {
-    font-size: 1.125rem;
+    font-size: 18px;
   }
 
   .product-card .button {
-    padding-inline: 0.5rem;
+    padding-inline: 8px;
   }
 
   .restaurant-info h3 {
-    font-size: 1.375rem;
+    font-size: 22px;
   }
 
   .restaurant-labels {
-    top: 1.25rem;
-    left: 1.25rem;
+    top: 20px;
+    left: 20px;
   }
 
   .view-all-button {
-    margin-top: 3rem;
+    margin-top: 48px;
   }
 
   .section-header {
@@ -1358,7 +1481,7 @@ input::placeholder {
   }
 
   .category-controls {
-    gap: 1rem;
+    gap: 16px;
     padding-right: 0;
   }
 
@@ -1367,59 +1490,56 @@ input::placeholder {
   }
 
   .arrow {
-    width: 3rem;
-    height: 3rem;
-    font-size: 1.4rem;
+    width: 48px;
+    height: 48px;
+    font-size: 22.4px;
   }
 
   .arrows {
-    gap: 0.625rem;
+    gap: 10px;
   }
 
   .category-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem 1.5rem;
-    margin-top: 2rem;
+    gap: 32px 24px;
+    margin-top: 32px;
   }
 
   .food-category h3 {
-    margin-top: 1rem;
-    font-size: 1.2rem;
+    margin-top: 16px;
+    font-size: 19.2px;
   }
 
   .benefit-card {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     align-items: stretch;
-    gap: 2rem;
-    width: min(30rem, calc(100% - 2.5rem));
-    padding: 2.5rem;
-    border-radius: 2rem;
+    gap: 32px;
+    width: min(480px, calc(100% - 40px));
+    padding: 40px;
+    border-radius: 32px;
   }
 
   .benefit {
-    gap: 2rem;
+    gap: 32px;
   }
 
-  .benefit + .benefit {
-    padding-top: 2rem;
-    border-top: 1px solid #ddd;
-  }
-
-  .benefit + .benefit::before {
-    display: none;
+  .benefit-divider {
+    width: 100%;
+    height: 2px;
   }
 
   .benefit h3 {
-    font-size: 2rem;
+    line-height: 38px;
+    font-size: 32px;
   }
 
   .benefit > img {
-    width: 7rem;
-    height: 7rem;
+    width: 112px;
+    height: 112px;
   }
 
   .detail-list {
-    gap: 3rem;
+    gap: 48px;
   }
 
   .detail-card, .detail-card-reverse {
@@ -1436,15 +1556,16 @@ input::placeholder {
 
   .detail-card .detail-content {
     grid-column: 1;
-    padding: 2rem;
+    padding: 32px;
   }
 
   .detail-content > div {
-    margin-bottom: 2rem;
+    margin-bottom: 32px;
   }
 
-  .detail-content h2 {
-    font-size: 2.125rem;
+  .detail-content h2, .detail-card:not(:first-child) .detail-content h2 {
+    line-height: 40px;
+    font-size: 34px;
   }
 
   .detail-content h2 br {
@@ -1452,32 +1573,33 @@ input::placeholder {
   }
 
   .order-banner {
-    min-height: 24rem;
+    min-height: 384px;
     background-size: auto 345.3202%;
     background-position: center;
   }
 
   .order-banner h2 {
-    font-size: 3rem;
+    line-height: 1.05;
+    font-size: 48px;
   }
 
   .banner-button {
-    margin-top: 2.5rem;
+    margin-top: 40px;
   }
 
   .site-footer {
-    padding-block: 3.5rem 2rem;
+    padding-block: 56px 32px;
   }
 
   .city-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2.5rem 1rem;
+    gap: 40px 16px;
   }
 
   .footer-middle {
     flex-direction: column;
-    padding-block: 2.5rem;
+    padding-block: 40px;
   }
 
   .footer-menus {
@@ -1485,28 +1607,32 @@ input::placeholder {
   }
 
   .footer-subscription {
-    width: min(100%, 30.1875rem);
+    width: min(100%, 483px);
   }
 
   .footer-menu ul {
-    margin-top: 1.5rem;
+    margin-top: 24px;
   }
 
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 1.5rem;
+    padding-top: 24px;
     padding-bottom: 0;
   }
 }
 
 @media (max-width: 480px) {
   .nav-container, .container {
-    width: calc(100% - 2rem);
+    width: calc(100% - 32px);
   }
 
   .nav-actions {
-    gap: 0.875rem;
+    gap: 14px;
+  }
+
+  .search-link {
+    width: auto;
   }
 
   .search-link > span:last-child {
@@ -1514,37 +1640,37 @@ input::placeholder {
   }
 
   .delivery-address > span:last-child {
-    font-size: 0.8rem;
+    font-size: 12.8px;
   }
 
   .hero, .hero-inner {
-    min-height: 45rem;
+    min-height: 720px;
   }
 
   .hero-copy {
-    padding-top: 2.5rem;
+    padding-top: 40px;
   }
 
   .hero-copy > p {
-    font-size: 1.125rem;
+    font-size: 18px;
   }
 
   .order-tabs {
-    padding: 1rem;
+    padding: 16px;
   }
 
   .order-tab {
-    padding-inline: 1rem;
+    padding-inline: 16px;
   }
 
   .order-fields {
     flex-direction: column;
     align-items: stretch;
-    padding: 1rem;
+    padding: 16px;
   }
 
   .address-field {
-    min-height: 3.25rem;
+    min-height: 52px;
   }
 
   .find-button {
@@ -1552,39 +1678,39 @@ input::placeholder {
   }
 
   .hero-art {
-    top: 30rem;
-    right: -1rem;
-    width: 22rem;
+    top: 480px;
+    right: -16px;
+    width: 352px;
   }
 
   .flash-grid, .restaurant-grid {
-    gap: 2rem 0.875rem;
+    gap: 32px 14px;
   }
 
   .flash-card h3 {
-    font-size: 1.125rem;
+    font-size: 18px;
   }
 
   .badge {
-    padding: 0.5rem;
-    font-size: 0.875rem;
+    padding: 8px;
+    font-size: 14px;
     line-height: 1.2;
   }
 
   .steps {
-    gap: 2.5rem 1rem;
+    gap: 40px 16px;
   }
 
   .step-icon, .step-icon img {
-    height: 5rem;
+    height: 80px;
   }
 
   .step h3 {
-    font-size: 1.125rem;
+    font-size: 18px;
   }
 
   .step p {
-    font-size: 0.9375rem;
+    font-size: 15px;
   }
 
   .product-grid {
@@ -1592,99 +1718,101 @@ input::placeholder {
   }
 
   .product-card h3 {
-    min-height: 2.7rem;
+    min-height: 43.2px;
   }
 
   .product-location {
-    gap: 0.375rem;
-    font-size: 1rem;
+    gap: 6px;
+    font-size: 16px;
   }
 
   .restaurant-labels {
-    top: 0.5rem;
-    left: 0.5rem;
-    gap: 0.25rem;
-    font-size: 0.875rem;
+    top: 8px;
+    left: 8px;
+    gap: 4px;
+    font-size: 14px;
   }
 
   .restaurant-labels > span {
-    gap: 0.25rem;
-    padding: 0.375rem;
+    gap: 4px;
+    padding: 6px;
   }
 
   .restaurant-labels .icon {
-    font-size: 0.75rem;
+    font-size: 12px;
   }
 
   .restaurant-info {
     align-items: flex-start;
-    gap: 0.5rem;
-    margin-top: 1rem;
-    min-height: 4rem;
+    gap: 8px;
+    margin-top: 16px;
+    min-height: 64px;
   }
 
   .restaurant-logo {
-    width: 2.75rem;
-    height: 2.75rem;
+    width: 44px;
+    height: 44px;
   }
 
   .restaurant-info h3 {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
   .rating {
-    font-size: 1.125rem;
+    font-size: 18px;
   }
 
   .restaurant-card > .badge {
-    margin-top: 1rem;
+    margin-top: 16px;
   }
 
   .section-header h2 {
-    font-size: 1.75rem;
+    font-size: 28px;
   }
 
   .arrow {
-    width: 2.5rem;
-    height: 2.5rem;
-    font-size: 1.125rem;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
   }
 
   .category-grid {
-    gap: 1.75rem 0.75rem;
+    gap: 28px 12px;
   }
 
   .food-category h3 {
-    font-size: 0.95rem;
+    font-size: 15.2px;
   }
 
   .benefit-card {
-    padding: 2rem;
+    padding: 24px;
   }
 
   .benefit {
-    gap: 1.5rem;
+    min-width: 0;
+    gap: 20px;
   }
 
   .benefit > img {
-    width: 6rem;
-    height: 6rem;
+    width: 88px;
+    height: 88px;
   }
 
   .benefit h3 {
-    font-size: 1.75rem;
+    line-height: 34px;
+    font-size: 28px;
   }
 
   .detail-card .detail-content {
-    padding: 1.5rem;
+    padding: 24px;
   }
 
   .detail-content p {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
   .order-banner h2 {
-    font-size: 2.5rem;
+    font-size: 40px;
   }
 
   .city-grid {
@@ -1694,11 +1822,11 @@ input::placeholder {
   .footer-menus {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2.5rem 1rem;
+    gap: 40px 16px;
   }
 
   .footer-menu li, .city-grid li {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
   .footer-menu:last-child {
@@ -1706,28 +1834,28 @@ input::placeholder {
   }
 
   .footer-subscription > p {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
   .subscribe-form label {
-    gap: 0.5rem;
-    padding-inline: 0.75rem;
+    gap: 8px;
+    padding-inline: 12px;
   }
 
   .subscribe-form input {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
   .subscribe-form .button {
-    width: 7rem;
-    font-size: 1rem;
+    width: 112px;
+    font-size: 16px;
   }
 
   .footer-bottom {
-    font-size: 0.8rem;
+    font-size: 12.8px;
   }
 
   .footer-bottom p {
-    gap: 0.4rem;
+    gap: 6.4px;
   }
 }
