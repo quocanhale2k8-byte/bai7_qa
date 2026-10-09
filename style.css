@@ -190,10 +190,6 @@ section, #order-form {
   transition: filter 160ms ease;
 }
 
-.button:hover, .arrow:hover {
-  filter: brightness(1.04);
-}
-
 .button .icon {
   font-size: 0.875rem;
 }
@@ -958,11 +954,6 @@ input::placeholder {
   background: transparent;
   line-height: inherit;
 }
-
-.city-grid button:hover {
-  color: var(--yellow);
-}
-
 .footer-middle {
   display: flex;
   justify-content: space-between;
@@ -1738,17 +1729,5 @@ input::placeholder {
 
   .footer-bottom p {
     gap: 0.4rem;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  :root {
-    scroll-behavior: auto;
-  }
-
-  *, *::before, *::after {
-    transition: none !important;
-    animation: none !important;
-    scroll-behavior: auto !important;
   }
 }
