@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffb30e">
+  <meta name="description" content="Find your favorite meals and the best food deals near you with foodwaGon.">
+  <title>foodwaGon</title>
+  <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/source-sans-pro-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a class="logo" href="#" aria-label="foodwaGon home"><img src="assets/icons/logo.svg" alt=""><span>food<b>waGon</b></span></a>
+      <div class="delivery-address"><strong>Deliver to:</strong><span class="icon icon-solid" aria-hidden="true">&#xf3c5;</span><span>Current Location <b id="current-location">Mohammadpur Bus Stand, Dhaka</b></span></div>
+      <div class="nav-actions"><a class="search-link" href="#order-form"><span class="icon icon-solid" aria-hidden="true">&#xf002;</span><span>Search Food</span></a><button class="login-button" type="button"><span class="icon icon-solid" aria-hidden="true">&#xf007;</span> Login</button></div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 id="hero-title">Are you starving?</h1>
+          <p>Within a few clicks, find meals that are accessible near you</p>
+          <form class="order-form" id="order-form">
+            <div class="order-tabs" role="tablist" aria-label="Order type">
+              <button class="order-tab active" id="delivery-tab" type="button" role="tab" aria-selected="true" aria-controls="address-panel" tabindex="0" data-mode="delivery"><span class="icon icon-solid" aria-hidden="true">&#xf21c;</span> Delivery</button>
+              <button class="order-tab" id="pickup-tab" type="button" role="tab" aria-selected="false" aria-controls="address-panel" tabindex="-1" data-mode="pickup"><span class="icon icon-solid" aria-hidden="true">&#xf290;</span> Pickup</button>
+            </div>
+            <div class="order-fields" id="address-panel" role="tabpanel" aria-labelledby="delivery-tab">
+              <label class="address-field"><span class="icon icon-solid" aria-hidden="true">&#xf3c5;</span><input id="address" type="text" name="address" placeholder="Enter Your Address" aria-label="Enter Your Address" autocomplete="street-address" required></label>
+              <button class="button find-button" type="submit"><span class="icon icon-solid" aria-hidden="true">&#xf002;</span> Find Food</button>
+            </div>
+          </form>
+        </div>
+        <div class="hero-art" aria-hidden="true"><img src="assets/images/hero-bowl.png" alt="" class="hero-bowl" fetchpriority="high" decoding="async"></div>
+      </div>
+    </section>
+    <section class="flash-deals" aria-label="Flash deals">
+      <div class="container flash-grid">
+        <article class="flash-card">
+          <div class="flash-photo">
+            <img src="assets/images/deal-salad.png" alt="Greys Vage" loading="lazy" decoding="async">
+            <div class="discount"><strong>15</strong><span><b>%</b><span>Off</span></span></div>
+          </div>
+          <h3>Greys Vage</h3>
+          <span class="badge badge-orange">6 Days Remaining</span>
+        </article>
+        <article class="flash-card">
+          <div class="flash-photo">
+            <img src="assets/images/deal-pasta.png" alt="Greys Vage" loading="lazy" decoding="async">
+            <div class="discount"><strong>10</strong><span><b>%</b><span>Off</span></span></div>
+          </div>
+          <h3>Greys Vage</h3>
+          <span class="badge badge-orange">6 Days Remaining</span>
+        </article>
+        <article class="flash-card">
+          <div class="flash-photo">
+            <img src="assets/images/deal-vegetables.png" alt="Greys Vage" loading="lazy" decoding="async">
+            <div class="discount"><strong>25</strong><span><b>%</b><span>Off</span></span></div>
+          </div>
+          <h3>Greys Vage</h3>
+          <span class="badge badge-orange">7 Days Remaining</span>
+        </article>
+        <article class="flash-card">
+          <div class="flash-photo">
+            <img src="assets/images/deal-soup.png" alt="Greys Vage" loading="lazy" decoding="async">
+            <div class="discount"><strong>20</strong><span><b>%</b><span>Off</span></span></div>
+          </div>
+          <h3>Greys Vage</h3>
+          <span class="badge badge-orange">8 Days Remaining</span>
+        </article>
+      </div>
+    </section>
+    <section class="how-it-works" aria-labelledby="how-title">
+      <h2 id="how-title">How does it work</h2>
+      <div class="container steps">
+        <article class="step">
+          <div class="step-icon"><img src="assets/icons/location.svg" alt="" loading="lazy"></div>
+          <h3>Select location</h3>
+          <p>Choose the location where your food will be delivered.</p>
+        </article>
+        <article class="step">
+          <div class="step-icon"><img src="assets/icons/order.svg" alt="" loading="lazy"></div>
+          <h3>Choose order</h3>
+          <p>Check over hundreds of menus to pick your favorite food</p>
+        </article>
+        <article class="step">
+          <div class="step-icon"><img src="assets/icons/payment.svg" alt="" loading="lazy"></div>
+          <h3>Pay advanced</h3>
+          <p>It's quick, safe, and simple. Select several methods of payment</p>
+        </article>
+        <article class="step">
+          <div class="step-icon"><img src="assets/icons/meals.svg" alt="" loading="lazy"></div>
+          <h3>Enjoy meals</h3>
+          <p>Food is made and delivered directly to your home.</p>
+        </article>
+      </div>
+    </section>
+    <section class="popular-items section-space" id="popular-items" aria-labelledby="popular-title">
+      <div class="container">
+        <h2 id="popular-title">Popular items</h2>
+        <div class="product-grid">
+        <article class="product-card">
+          <img src="assets/images/cheese-burger.png" alt="Cheese Burger" class="product-photo" loading="lazy" decoding="async">
+          <h3>Cheese Burger</h3>
+          <p class="product-location"><span class="icon icon-solid" aria-hidden="true">&#xf3c5;</span> Burger Arena</p>
+          <p class="price">$3.88</p>
+          <a class="button button-orange" href="#order-form">Order Now</a>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/toffes-cake.png" alt="Toffe’s Cake" class="product-photo" loading="lazy" decoding="async">
+          <h3>Toffe’s Cake</h3>
+          <p class="product-location"><span class="icon icon-solid" aria-hidden="true">&#xf3c5;</span> Top Sticks</p>
+          <p class="price">$4.00</p>
+          <a class="button button-orange" href="#order-form">Order Now</a>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/dancake.png" alt="Dancake" class="product-photo" loading="lazy" decoding="async">
+          <h3>Dancake</h3>
+          <p class="product-location"><span class="icon icon-solid" aria-hidden="true">&#xf3c5;</span> Cake World</p>
+          <p class="price">$1.99</p>
+          <a class="button button-orange" href="#order-form">Order Now</a>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/crispy-sandwich.png" alt="Crispy Sandwitch" class="product-photo" loading="lazy" decoding="async">
+          <h3>Crispy Sandwitch</h3>
+          <p class="product-location"><span class="icon icon-solid" aria-hidden="true">&#xf3c5;</span> Fastfood Dine</p>
+          <p class="price">$3.00</p>
+          <a class="button button-orange" href="#order-form">Order Now</a>
+        </article>
+        <article class="product-card">
+          <img src="assets/images/thai-soup.png" alt="Thai  Soup" class="product-photo" loading="lazy" decoding="async">
+          <h3>Thai  Soup</h3>
+          <p class="product-location"><span class="icon icon-solid" aria-hidden="true">&#xf3c5;</span> Foody man</p>
+          <p class="price">$2.79</p>
+          <a class="button button-orange" href="#order-form">Order Now</a>
+        </article>
+        </div>
+      </div>
+    </section>
+    <section class="restaurants section-space" id="restaurants" aria-labelledby="restaurants-title">
+      <div class="container">
+        <h2 id="restaurants-title">Featured Restaurants</h2>
+        <div class="restaurant-grid">
+        <article class="restaurant-card">
+          <div class="restaurant-photo">
+            <img src="assets/images/foodworld.png" alt="Foodworld" loading="lazy" decoding="async">
+            <div class="restaurant-labels"><span><span class="icon icon-solid" aria-hidden="true">&#xf02b;</span> 20% off</span><span><span class="icon icon-solid" aria-hidden="true">&#xf017;</span> Fast</span></div>
+          </div>
+          <div class="restaurant-info">
+            <img src="assets/images/foodworld-logo.png" alt="Foodworld logo" class="restaurant-logo" loading="lazy" decoding="async">
+            <div><h3>Foodworld</h3><p class="rating"><span class="icon icon-solid" aria-hidden="true">&#xf005;</span> 46</p></div>
+          </div>
+          <span class="badge badge-orange">Opens tomorrow</span>
+        </article>
+        <article class="restaurant-card">
+          <div class="restaurant-photo">
+            <img src="assets/images/pizzahub.png" alt="Pizzahub" loading="lazy" decoding="async">
+            <div class="restaurant-labels"><span><span class="icon icon-solid" aria-hidden="true">&#xf02b;</span> 15% off</span><span><span class="icon icon-solid" aria-hidden="true">&#xf017;</span> Fast</span></div>
+          </div>
+          <div class="restaurant-info">
+            <img src="assets/images/pizzahub-logo.png" alt="Pizzahub logo" class="restaurant-logo" loading="lazy" decoding="async">
+            <div><h3>Pizzahub</h3><p class="rating"><span class="icon icon-solid" aria-hidden="true">&#xf005;</span> 40</p></div>
+          </div>
+          <span class="badge badge-orange">Opens tomorrow</span>
+        </article>
+        <article class="restaurant-card">
+          <div class="restaurant-photo">
+            <img src="assets/images/donuts-hut.png" alt="Donuts hut" loading="lazy" decoding="async">
+            <div class="restaurant-labels"><span><span class="icon icon-solid" aria-hidden="true">&#xf02b;</span> 10% off</span><span><span class="icon icon-solid" aria-hidden="true">&#xf017;</span> Fast</span></div>
+          </div>
+          <div class="restaurant-info">
+            <img src="assets/images/donuts-logo.png" alt="Donuts hut logo" class="restaurant-logo" loading="lazy" decoding="async">
+            <div><h3>Donuts hut</h3><p class="rating"><span class="icon icon-solid" aria-hidden="true">&#xf005;</span> 20</p></div>
+          </div>
+          <span class="badge badge-green">Open Now</span>
+        </article>
+        <article class="restaurant-card">
+          <div class="restaurant-photo">
+            <img src="assets/images/donuts-hut-cupcake.png" alt="Donuts hut" loading="lazy" decoding="async">
+            <div class="restaurant-labels"><span><span class="icon icon-solid" aria-hidden="true">&#xf02b;</span> 15% off</span><span><span class="icon icon-solid" aria-hidden="true">&#xf017;</span> Fast</span></div>
+          </div>
+          <div class="restaurant-info">
+            <img src="assets/images/subway-logo.png" alt="Donuts hut logo" class="restaurant-logo" loading="lazy" decoding="async">
+            <div><h3>Donuts hut</h3><p class="rating"><span class="icon icon-solid" aria-hidden="true">&#xf005;</span> 50</p></div>
+          </div>
+          <span class="badge badge-green">Open Now</span>
+        </article>
+        <article class="restaurant-card">
+          <div class="restaurant-photo">
+            <img src="assets/images/ruby-tuesday.png" alt="Ruby Tuesday" loading="lazy" decoding="async">
+            <div class="restaurant-labels"><span><span class="icon icon-solid" aria-hidden="true">&#xf02b;</span> 10% off</span><span><span class="icon icon-solid" aria-hidden="true">&#xf017;</span> Fast</span></div>
+          </div>
+          <div class="restaurant-info">
+            <img src="assets/images/ruby-logo.png" alt="Ruby Tuesday logo" class="restaurant-logo" loading="lazy" decoding="async">
+            <div><h3>Ruby Tuesday</h3><p class="rating"><span class="icon icon-solid" aria-hidden="true">&#xf005;</span> 26</p></div>
+          </div>
+          <span class="badge badge-green">Open Now</span>
+        </article>
+        <article class="restaurant-card">
+          <div class="restaurant-photo">
+            <img src="assets/images/kuakata-chicken.png" alt="Kuakata Fried Chicken" loading="lazy" decoding="async">
+            <div class="restaurant-labels"><span><span class="icon icon-solid" aria-hidden="true">&#xf02b;</span> 25% off</span><span><span class="icon icon-solid" aria-hidden="true">&#xf017;</span> Fast</span></div>
+          </div>
+          <div class="restaurant-info">
+            <img src="assets/images/kfc-logo.png" alt="Kuakata Fried Chicken logo" class="restaurant-logo" loading="lazy" decoding="async">
+            <div><h3>Kuakata Fried Chicken</h3><p class="rating"><span class="icon icon-solid" aria-hidden="true">&#xf005;</span> 53</p></div>
+          </div>
+          <span class="badge badge-green">Open Now</span>
+        </article>
+        <article class="restaurant-card">
+          <div class="restaurant-photo">
+            <img src="assets/images/red-square.png" alt="Red Square" loading="lazy" decoding="async">
+            <div class="restaurant-labels"><span><span class="icon icon-solid" aria-hidden="true">&#xf02b;</span> 10% off</span><span><span class="icon icon-solid" aria-hidden="true">&#xf017;</span> Fast</span></div>
+          </div>
+          <div class="restaurant-info">
+            <img src="assets/images/red-square-logo.png" alt="Red Square logo" class="restaurant-logo" loading="lazy" decoding="async">
+            <div><h3>Red Square</h3><p class="rating"><span class="icon icon-solid" aria-hidden="true">&#xf005;</span> 45</p></div>
+          </div>
+          <span class="badge badge-green">Open Now</span>
+        </article>
+        <article class="restaurant-card">
+          <div class="restaurant-photo">
+            <img src="assets/images/taco-bell.png" alt="Taco Bell" loading="lazy" decoding="async">
+            <div class="restaurant-labels"><span><span class="icon icon-solid" aria-hidden="true">&#xf02b;</span> 10% off</span><span><span class="icon icon-solid" aria-hidden="true">&#xf017;</span> Fast</span></div>
+          </div>
+          <div class="restaurant-info">
+            <img src="assets/images/taco-bell-logo.png" alt="Taco Bell logo" class="restaurant-logo" loading="lazy" decoding="async">
+            <div><h3>Taco Bell</h3><p class="rating"><span class="icon icon-solid" aria-hidden="true">&#xf005;</span> 35</p></div>
+          </div>
+          <span class="badge badge-green">Open Now</span>
+        </article>
+        </div>
+        <a class="button view-all-button" href="#search-food">View All <span class="icon icon-solid" aria-hidden="true">&#xf054;</span></a>
+      </div>
+    </section>
+    <section class="search-food" id="search-food" aria-labelledby="search-title">
+      <div class="container">
+        <div class="section-header"><h2 id="search-title">Search by Food</h2><div class="category-controls"><a href="#popular-items">View All <span class="icon icon-solid" aria-hidden="true">&#xf054;</span></a><div class="arrows"><button type="button" class="arrow" id="previous-food" aria-label="Previous food"><span class="icon icon-solid" aria-hidden="true">&#xf053;</span></button><button type="button" class="arrow" id="next-food" aria-label="Next food"><span class="icon icon-solid" aria-hidden="true">&#xf054;</span></button></div></div></div>
+        <div class="category-grid" id="food-categories">
+          <a class="food-category" href="#popular-items">
+            <img src="assets/images/pizza.png" alt="Pizza" loading="lazy" decoding="async">
+            <h3>Pizza</h3>
+          </a>
+          <a class="food-category" href="#popular-items">
+            <img src="assets/images/burger.png" alt="Burger" loading="lazy" decoding="async">
+            <h3>Burger</h3>
+          </a>
+          <a class="food-category" href="#popular-items">
+            <img src="assets/images/noodles.png" alt="Noodles" loading="lazy" decoding="async">
+            <h3>Noodles</h3>
+          </a>
+          <a class="food-category" href="#popular-items">
+            <img src="assets/images/sub-sandwich.png" alt="Sub-sandiwch" loading="lazy" decoding="async">
+            <h3>Sub-sandiwch</h3>
+          </a>
+          <a class="food-category" href="#popular-items">
+            <img src="assets/images/chowmein.png" alt="Chowmein" loading="lazy" decoding="async">
+            <h3>Chowmein</h3>
+          </a>
+          <a class="food-category" href="#popular-items">
+            <img src="assets/images/steak.png" alt="Steak" loading="lazy" decoding="async">
+            <h3>Steak</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="benefits" aria-label="Our benefits">
+      <div class="benefit-card">
+        <div class="benefit"><img src="assets/icons/daily-discounts.svg" alt="" loading="lazy"><h3>Daily<br>Discounts</h3></div>
+        <div class="benefit"><img src="assets/icons/live-tracing.svg" alt="" loading="lazy"><h3>Live<br>Tracing</h3></div>
+        <div class="benefit"><img src="assets/icons/quick-delivery.svg" alt="" loading="lazy"><h3>Quick<br>Delivery</h3></div>
+      </div>
+    </section>
+    <section class="details" aria-label="Best deals">
+      <div class="container detail-list">
+        <article class="detail-card">
+          <div class="detail-content"><div><h2>Best deals <span>Crispy Sandwiches</span></h2><p>Enjoy the large size of sandwiches. Complete<br class="desktop-break"> perfect slice of sandwiches.</p></div><a class="button button-yellow" href="#order-form">Proceed to order <span class="icon icon-solid" aria-hidden="true">&#xf054;</span></a></div>
+          <img src="assets/images/sandwich-deal.png" alt="Fresh crispy sandwiches" class="detail-photo" loading="lazy" decoding="async">
+        </article>
+        <article class="detail-card detail-card-reverse">
+          <div class="detail-content"><div><h2>Celebrate parties<br> with <span>Fried Chicken</span></h2><p>Get the best fried chicken smeared with a lip smacking lemon chili flavor. Check out<br class="desktop-break"> best deals for fried chicken.</p></div><a class="button button-yellow" href="#order-form">Proceed to order <span class="icon icon-solid" aria-hidden="true">&#xf054;</span></a></div>
+          <img src="assets/images/chicken-deal.png" alt="Fried chicken with potatoes and herbs" class="detail-photo" loading="lazy" decoding="async">
+        </article>
+        <article class="detail-card">
+          <div class="detail-content"><div><h2>Wanna eat hot<br> &amp; spicy <span>Pizza?</span></h2><p>Pair up with a friend and enjoy the<br class="desktop-break"> hot and crispy pizza pops. Try it<br class="desktop-break"> with the best deals.</p></div><a class="button button-yellow" href="#order-form">Proceed to order <span class="icon icon-solid" aria-hidden="true">&#xf054;</span></a></div>
+          <img src="assets/images/pizza-deal.png" alt="Hot and spicy pizza" class="detail-photo" loading="lazy" decoding="async">
+        </article>
+      </div>
+    </section>
+    <section class="order-banner" aria-labelledby="banner-title">
+      <div class="banner-content"><h2 id="banner-title">Are you ready to order with the best deals?</h2><a class="button banner-button" href="#order-form">Proceed to order <span class="icon icon-solid" aria-hidden="true">&#xf054;</span></a></div>
+    </section>
+  </main>
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <section class="top-cities" aria-labelledby="cities-title">
+        <h3 id="cities-title">Our top cities</h3>
+        <div class="city-grid">
+          <ul>
+            <li><button type="button" data-city="San Francisco">San Francisco</button></li>
+            <li><button type="button" data-city="Miami">Miami</button></li>
+            <li><button type="button" data-city="San Diego">San Diego</button></li>
+            <li><button type="button" data-city="East Bay">East Bay</button></li>
+            <li><button type="button" data-city="Long Beach">Long Beach</button></li>
+          </ul>
+          <ul>
+            <li><button type="button" data-city="Los Angeles">Los Angeles</button></li>
+            <li><button type="button" data-city="Washington DC">Washington DC</button></li>
+            <li><button type="button" data-city="Seattle">Seattle</button></li>
+            <li><button type="button" data-city="Portland">Portland</button></li>
+            <li><button type="button" data-city="Nashville">Nashville</button></li>
+          </ul>
+          <ul>
+            <li><button type="button" data-city="New York City">New York City</button></li>
+            <li><button type="button" data-city="Orange County">Orange County</button></li>
+            <li><button type="button" data-city="Atlanta">Atlanta</button></li>
+            <li><button type="button" data-city="Charlotte">Charlotte</button></li>
+            <li><button type="button" data-city="Denver">Denver</button></li>
+          </ul>
+          <ul>
+            <li><button type="button" data-city="Chicago">Chicago</button></li>
+            <li><button type="button" data-city="Phoenix">Phoenix</button></li>
+            <li><button type="button" data-city="Las Vegas">Las Vegas</button></li>
+            <li><button type="button" data-city="Sacramento">Sacramento</button></li>
+            <li><button type="button" data-city="Oklahoma City">Oklahoma City</button></li>
+          </ul>
+          <ul>
+            <li><button type="button" data-city="Columbus">Columbus</button></li>
+            <li><button type="button" data-city="New Mexico">New Mexico</button></li>
+            <li><button type="button" data-city="Albuquerque">Albuquerque</button></li>
+            <li><button type="button" data-city="Sacramento">Sacramento</button></li>
+            <li><button type="button" data-city="New Orleans">New Orleans</button></li>
+          </ul>
+        </div>
+      </section>
+      <div class="footer-middle">
+        <div class="footer-menus">
+          <div class="footer-menu"><h3>Company</h3><ul><li>About us</li><li>Team</li><li>Careers</li><li>Blog</li></ul></div>
+          <div class="footer-menu"><h3>Contact</h3><ul><li>Help &amp; Support</li><li>Partner with us</li><li>Ride with us</li></ul></div>
+          <div class="footer-menu"><h3>Legal</h3><ul><li>Terms &amp; Conditions</li><li>Refund &amp; Cancellation</li><li>Privacy Policy</li><li>Cookie Policy</li></ul></div>
+        </div>
+        <div class="footer-subscription">
+          <h3>Follow Us</h3>
+          <div class="social-icons"><span role="img" aria-label="Instagram"><span class="icon icon-brands" aria-hidden="true">&#xf16d;</span></span><span role="img" aria-label="Facebook"><span class="icon icon-brands" aria-hidden="true">&#xf09a;</span></span><span role="img" aria-label="Twitter"><span class="icon icon-brands" aria-hidden="true">&#xf099;</span></span></div>
+          <p>Receive exclusive offers in your mailbox</p>
+          <form class="subscribe-form"><label><span class="icon icon-solid" aria-hidden="true">&#xf0e0;</span><input type="email" name="email" aria-label="Enter Your email" placeholder="Enter Your email" autocomplete="email" required></label><button class="button button-yellow" type="submit">Subscribe</button></form>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>All rights Reserved <span class="icon icon-regular" aria-hidden="true">&#xf1f9;</span> <strong>Your Company, 2021</strong></p><p>Made with <span class="heart"><span class="icon icon-solid" aria-hidden="true">&#xf004;</span></span> by <strong>Themewagon</strong></p></div>
+    </div>
+  </footer>
+</body>
+</html>

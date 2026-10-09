@@ -1,0 +1,1754 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('assets/fonts/source-sans-pro-latin-400-normal.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('assets/fonts/source-sans-pro-latin-700-normal.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('assets/fonts/source-sans-pro-latin-900-normal.woff2') format('woff2');
+  font-weight: 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('assets/fonts/open-sans-latin-400-normal.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('assets/fonts/open-sans-latin-600-normal.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('assets/fonts/open-sans-latin-700-normal.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Exo 2';
+  src: url('assets/fonts/exo-2-latin-400-normal.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Font Awesome';
+  src: url('assets/fonts/fa-solid-900.woff2') format('woff2');
+  font-weight: 900;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Font Awesome';
+  src: url('assets/fonts/fa-regular-400.woff2') format('woff2');
+  font-weight: 400;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Font Awesome Brands';
+  src: url('assets/fonts/fa-brands-400.woff2') format('woff2');
+  font-weight: 400;
+  font-display: block;
+}
+
+:root {
+  --orange: #f17228;
+  --yellow: #ffb30e;
+  --heading: #212121;
+  --text: #424242;
+  --muted: #757575;
+  --container: 92.5rem;
+  font-size: clamp(12px, 0.843437vw, 16px);
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+
+h1, h2, h3, p, ul {
+  margin: 0;
+}
+
+h1, h2, h3, strong, b {
+  font-weight: 700;
+}
+
+h2 {
+  color: var(--heading);
+  font-size: 2.6875rem;
+  line-height: 3rem;
+}
+
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.625rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button, input {
+  border: 0;
+}
+
+button {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+:focus-visible {
+  outline: 3px solid #b94c13;
+  outline-offset: 5px;
+}
+
+section, #order-form {
+  scroll-margin-top: 2rem;
+}
+
+.container {
+  width: min(var(--container), calc(100% - 4rem));
+  margin-inline: auto;
+}
+
+.icon {
+  display: inline-block;
+  flex-shrink: 0;
+  font-family: 'Font Awesome';
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.icon-regular {
+  font-weight: 400;
+}
+
+.icon-brands {
+  font-family: 'Font Awesome Brands';
+  font-weight: 400;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  min-height: 3.75rem;
+  padding: 1.3125rem 1.5rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  transition: filter 160ms ease;
+}
+
+.button:hover, .arrow:hover {
+  filter: brightness(1.04);
+}
+
+.button .icon {
+  font-size: 0.875rem;
+}
+
+.button-orange {
+  background: var(--orange);
+  box-shadow: 0 1.25rem 2.5rem #fa63233d, 0 0.3125rem 0.625rem #fd725c38;
+}
+
+.button-yellow {
+  background: linear-gradient(95deg, #ffb800, #ff8a00);
+  box-shadow: 0 0.875rem 2rem #ffb20e4a, 0 0.3125rem 0.5rem #de97003d;
+}
+
+.site-header {
+  height: 4.75rem;
+  background: #fff;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(91.0625rem, calc(100% - 4rem));
+  height: 100%;
+  margin-inline: auto;
+  gap: 1rem;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+  color: var(--orange);
+  font-size: 1.944387rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.logo img {
+  width: 1.75rem;
+  height: 1.873537rem;
+}
+
+.logo b {
+  letter-spacing: 0;
+  color: var(--yellow);
+}
+
+.delivery-address {
+  display: flex;
+  align-items: center;
+  gap: 0.5625rem;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+
+.delivery-address > strong {
+  margin-right: 0.1875rem;
+}
+
+.delivery-address > span:last-child {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.delivery-address .icon, .search-link .icon {
+  color: var(--yellow);
+}
+
+.nav-actions, .search-link {
+  display: flex;
+  align-items: center;
+}
+
+.nav-actions {
+  gap: 1.875rem;
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+.search-link {
+  gap: 0.5rem;
+  line-height: 1;
+}
+
+.login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  min-width: 7.375rem;
+  height: 2.875rem;
+  border-radius: 0.5rem;
+  color: #ffb800;
+  background: #fff;
+  box-shadow: 0 1.25rem 2.5rem #ffae004a, 0 0.3125rem 0.625rem #ffae0042;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.hero {
+  overflow: hidden;
+  height: 38.75rem;
+  background: #ffbd13 url('assets/images/hero-background.png') center / cover no-repeat;
+}
+
+.hero-inner {
+  position: relative;
+  height: 100%;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  width: 53.5rem;
+  margin-left: 0.90625rem;
+  padding-top: 8.25rem;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: 5.5rem;
+  line-height: 1;
+  text-shadow: 0 1.6875rem 5.125rem #ffae0047;
+}
+
+.hero-copy > p {
+  margin-top: 0.9375rem;
+  font-size: 1.375rem;
+  line-height: 1.625rem;
+}
+
+.order-form {
+  margin-top: 2rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: #fff;
+}
+
+.order-tabs {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  border-bottom: 0.03rem solid #eee;
+}
+
+.order-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  padding: 0.625rem 1.5rem;
+  border-radius: 0.5rem;
+  color: var(--muted);
+  background: transparent;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.order-tab.active {
+  color: var(--orange);
+  background: #f172281a;
+}
+
+.order-fields {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.address-field {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  min-width: 0;
+  padding: 0.4375rem 1rem;
+  border-radius: 0.5rem;
+  background: #f5f5f5;
+}
+
+.address-field .icon {
+  color: #ff7474;
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+input {
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  color: var(--text);
+  background: transparent;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+
+input::placeholder {
+  color: #9e9e9e;
+  opacity: 1;
+}
+
+.find-button {
+  flex-shrink: 0;
+  width: 12.4375rem;
+  background: linear-gradient(96deg, #ff7a7a, #f65900);
+}
+
+.hero-art {
+  position: absolute;
+  top: 11.1744125rem;
+  right: -0.57195625rem;
+  width: 31.071096rem;
+  aspect-ratio: 1;
+  isolation: isolate;
+}
+
+.hero-art::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 50%;
+  background: #6a572659;
+  box-shadow: -2.5rem 2rem 4.75rem #7855004d;
+  content: '';
+}
+
+.hero-art::after {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #c9c9c9;
+  mix-blend-mode: overlay;
+  content: '';
+}
+
+.hero-bowl {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.flash-deals {
+  padding-block: 5rem;
+}
+
+.flash-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 92.228333rem;
+}
+
+.flash-photo {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 356.91333 / 301;
+  border-radius: 1rem;
+}
+
+.flash-photo > img, .restaurant-photo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.discount {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  height: 5.1875rem;
+  padding: 0.625rem 1.125rem;
+  border-radius: 0 2rem 0 0;
+  color: #fff;
+  background: var(--yellow);
+}
+
+.discount > strong {
+  font-size: 4.25rem;
+  line-height: 0.91;
+}
+
+.discount > span {
+  display: flex;
+  flex-direction: column;
+}
+
+.discount b {
+  font-size: 2.1875rem;
+  line-height: 0.91;
+}
+
+.discount > span > span {
+  font-size: 1.375rem;
+  line-height: 1.2;
+}
+
+.flash-card h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.875rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+}
+
+.badge-orange {
+  color: var(--orange);
+  background: #f1722833;
+}
+
+.badge-green {
+  color: #79b93c;
+  background: #79b93c33;
+}
+
+.how-it-works {
+  padding-block: 5rem;
+  background: linear-gradient(180deg, #ffce6738, #fdedca00);
+  text-align: center;
+}
+
+.how-it-works > h2 {
+  color: var(--orange);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2rem;
+  max-width: 82.75rem;
+  margin-top: 3.4375rem;
+}
+
+.step-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7rem;
+  margin-bottom: 2.5625rem;
+  filter: drop-shadow(0 1.25rem 1.25rem #ffae004a) drop-shadow(0 0.3125rem 0.3125rem #ffae0042);
+}
+
+.step-icon img {
+  width: auto;
+  height: 7rem;
+}
+
+.step p {
+  margin-top: 0.625rem;
+  color: #9e9e9e;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5625rem;
+}
+
+.section-space {
+  padding-block: 5rem;
+}
+
+.section-space h2 {
+  text-align: center;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 5.5rem;
+}
+
+.product-photo {
+  width: 100%;
+  aspect-ratio: 283.4 / 283;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  margin-top: 1rem;
+}
+
+.product-location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  color: var(--yellow);
+  font-size: 1.375rem;
+  line-height: 1.625rem;
+}
+
+.product-location .icon {
+  font-size: 1.125rem;
+}
+
+.price {
+  margin-top: 0.5rem;
+  color: var(--heading);
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+}
+
+.product-card .button {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 4rem 1rem;
+  margin-top: 5.5rem;
+  margin-inline: 0.125rem;
+}
+
+.restaurant-photo {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 357 / 301;
+  border-radius: 1rem;
+}
+
+.restaurant-labels {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  color: #fff;
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.restaurant-labels > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: var(--orange);
+  white-space: nowrap;
+}
+
+.restaurant-labels > span:last-child {
+  background: var(--yellow);
+}
+
+.restaurant-labels .icon {
+  font-size: 1.125rem;
+}
+
+.restaurant-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  min-height: 4rem;
+  margin-top: 1.5rem;
+}
+
+.restaurant-logo {
+  flex-shrink: 0;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+  color: var(--yellow);
+  font-size: 1.375rem;
+  line-height: 1.625rem;
+}
+
+.restaurant-card > .badge {
+  margin-top: 2rem;
+}
+
+.view-all-button {
+  display: flex;
+  width: 11.125rem;
+  margin: 5.5rem auto 0;
+  border-radius: 0.875rem;
+  background: linear-gradient(97deg, #ffba26, #ff9a0e);
+  box-shadow: 0 1.25rem 2.5rem #ffae004a, 0 0.3125rem 0.625rem #ffae0042;
+}
+
+.search-food {
+  padding-block: 6.34375rem;
+  background: #fefaf1;
+}
+
+.section-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-height: 4.75rem;
+}
+
+.category-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.65625rem;
+  padding-right: 1.09375rem;
+  color: var(--yellow);
+  font-weight: 700;
+}
+
+.category-controls > a {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.category-controls > a .icon {
+  font-size: 1rem;
+}
+
+.arrows {
+  display: flex;
+  gap: 1rem;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.75rem;
+  height: 4.75rem;
+  border: 1px solid #faaa01;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--yellow);
+  box-shadow: 0 0.875rem 2rem #ffb20e4a, 0 0.3125rem 0.5rem #de97003d;
+  font-size: 2.0625rem;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 2.1375rem;
+  margin-top: 2.8125rem;
+}
+
+.food-category {
+  min-width: 0;
+  text-align: center;
+}
+
+.food-category img {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.food-category h3 {
+  margin-top: 1.625rem;
+}
+
+.benefits {
+  padding-block: 7.5rem;
+  background: #feefd0;
+}
+
+.benefit-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(76.875rem, calc(100% - 4rem));
+  min-height: 15.375rem;
+  margin-inline: auto;
+  padding: 3.4375rem;
+  border-radius: 2.875rem;
+  background: #fff;
+  box-shadow: 0 1.6875rem 5.125rem #ffae0047, 0 0.875rem 0.9375rem #ffae0003;
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: 1.875rem;
+  position: relative;
+}
+
+.benefit + .benefit::before {
+  position: absolute;
+  top: 1.25rem;
+  left: -3.5rem;
+  width: 0.125rem;
+  height: 6rem;
+  background: #cfcfcf;
+  content: '';
+}
+
+.benefit > img {
+  width: 8.5rem;
+  height: 8.5rem;
+}
+
+.benefit h3 {
+  background: linear-gradient(95deg, #fb3c00, #ffb800);
+  background-clip: text;
+  color: transparent;
+  font-size: 2.1875rem;
+  line-height: 1.2;
+}
+
+.details {
+  padding-block: 7.5rem;
+}
+
+.detail-list {
+  display: grid;
+  gap: 5rem;
+}
+
+.detail-card {
+  display: grid;
+  grid-template-columns: 519fr 961fr;
+  overflow: hidden;
+  min-height: 32rem;
+  border-radius: 1rem;
+  box-shadow: 0 1.6875rem 5.125rem #7c7c7c47, 0 0.875rem 0.9375rem #7c7c7c0f;
+}
+
+.detail-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3.5rem;
+}
+
+.detail-content > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  margin-bottom: 3rem;
+}
+
+.detail-content h2 {
+  color: #353535;
+}
+
+.detail-content h2 span {
+  color: var(--yellow);
+}
+
+.detail-content p {
+  margin-top: 1.1875rem;
+  color: #616161b0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  line-height: 1.5625rem;
+}
+
+.detail-content .button {
+  flex-shrink: 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.detail-photo {
+  width: 100%;
+  height: 100%;
+  min-height: 32rem;
+  object-fit: cover;
+}
+
+.detail-card-reverse {
+  grid-template-columns: 961fr 519fr;
+}
+
+.detail-card-reverse .detail-photo {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.detail-card-reverse .detail-content {
+  grid-column: 2;
+}
+
+.order-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 25rem;
+  background-color: #ffb30e;
+  background-image: url('assets/images/order-background.jpg');
+  background-position: right 49.4096%;
+  background-size: 107.8994% 345.3202%;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.banner-content {
+  width: min(45.5rem, calc(100% - 3rem));
+}
+
+.order-banner h2 {
+  color: #fff;
+  font-size: 3.5625rem;
+  font-weight: 900;
+  line-height: 0.975;
+}
+
+.banner-button {
+  margin-top: 3.875rem;
+  padding-inline: 1.5625rem;
+  background: linear-gradient(95deg, #f17228, #f15e28);
+  box-shadow: 0 0.875rem 2rem #ffb20e4a, 0 0.3125rem 0.5rem #de97003d;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.site-footer {
+  padding-block: 5.03125rem;
+  color: #f5f5f5;
+  background: #212121;
+}
+
+.top-cities {
+  padding-bottom: 3.75rem;
+}
+
+.city-grid {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+}
+
+.city-grid li, .footer-menu li {
+  font-size: 1.125rem;
+  line-height: 1;
+}
+
+.city-grid li + li, .footer-menu li + li {
+  margin-top: 1rem;
+}
+
+.city-grid button {
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  line-height: inherit;
+}
+
+.city-grid button:hover {
+  color: var(--yellow);
+}
+
+.footer-middle {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+  border-top: 1px solid #424242;
+}
+
+.footer-menus {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 37.9375rem;
+}
+
+.footer-menu ul {
+  margin-top: 2.5rem;
+}
+
+.footer-subscription {
+  width: 30.1875rem;
+  color: #bbbbbb;
+}
+
+.footer-subscription > h3 {
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  opacity: 0.6;
+  line-height: 1.375rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.footer-subscription > p {
+  margin-top: 2.6875rem;
+  color: #bbb;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  line-height: 1.5625rem;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.subscribe-form label {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  flex: 1;
+  min-width: 0;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background: #424242;
+}
+
+.subscribe-form label .icon {
+  color: #adadad;
+  font-size: 1.5rem;
+}
+
+.subscribe-form input {
+  color: #fff;
+}
+
+.subscribe-form input::placeholder {
+  color: #adadad;
+}
+
+.subscribe-form .button {
+  width: 8.3125rem;
+  flex-shrink: 0;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 3.3125rem;
+  padding-top: 1rem;
+  padding-bottom: 1.1875rem;
+  border-top: 1px solid #424242;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.2;
+}
+
+.footer-bottom p {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.footer-bottom p:last-child {
+  font-family: 'Exo 2', sans-serif;
+  gap: 0.3rem;
+}
+
+.footer-bottom p:last-child strong {
+  margin-left: 0.2rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.heart {
+  color: var(--yellow);
+}
+
+@media (max-width: 1100px) {
+  :root {
+    font-size: 14px;
+  }
+
+  .container, .nav-container {
+    width: calc(100% - 4rem);
+  }
+
+  .delivery-address > span:last-child {
+    font-size: 0.85rem;
+  }
+
+  .delivery-address > strong {
+    display: none;
+  }
+
+  .hero-copy {
+    width: 64%;
+    margin-left: 0;
+  }
+
+  .hero h1 {
+    font-size: 4.5rem;
+  }
+
+  .hero-art {
+    right: -4rem;
+    width: 30rem;
+  }
+
+  .hero-copy > p {
+    max-width: 28rem;
+  }
+
+  .order-fields {
+    gap: 0.75rem;
+    padding: 1.25rem;
+  }
+
+  .find-button {
+    width: 10rem;
+    padding-inline: 0.75rem;
+  }
+
+  .restaurant-labels {
+    top: 1rem;
+    left: 0.75rem;
+    font-size: 1.125rem;
+  }
+
+  .restaurant-labels > span {
+    gap: 0.4rem;
+    padding: 0.5rem 0.625rem;
+  }
+
+  .restaurant-info {
+    gap: 0.75rem;
+  }
+
+  .restaurant-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .benefit-card {
+    padding: 2.5rem;
+  }
+
+  .benefit {
+    gap: 1rem;
+  }
+
+  .benefit > img {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .benefit h3 {
+    font-size: 1.75rem;
+  }
+
+  .benefit + .benefit::before {
+    top: 0;
+    left: -1.5rem;
+  }
+
+  .detail-card, .detail-card-reverse {
+    grid-template-columns: 42% 58%;
+  }
+
+  .detail-card-reverse {
+    grid-template-columns: 58% 42%;
+  }
+
+  .detail-content {
+    padding: 2.5rem;
+  }
+
+  .detail-content h2 {
+    font-size: 2.4rem;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+  .footer-menus {
+    width: 52%;
+    gap: 1rem;
+  }
+
+  .footer-subscription {
+    width: 40%;
+  }
+
+  .subscribe-form {
+    gap: 0.5rem;
+  }
+
+  .subscribe-form .button {
+    width: 7rem;
+  }
+}
+
+@media (max-width: 800px) {
+  :root {
+    font-size: 16px;
+  }
+
+  .container, .nav-container {
+    width: calc(100% - 2.5rem);
+  }
+
+  .site-header {
+    height: auto;
+  }
+
+  .nav-container {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-block: 1rem;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+  }
+
+  .nav-actions {
+    gap: 1rem;
+  }
+
+  .delivery-address {
+    order: 3;
+    justify-content: center;
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .search-link {
+    font-size: 1rem;
+  }
+
+  .login-button {
+    min-width: 5.75rem;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 42rem;
+  }
+
+  .hero-copy {
+    width: 100%;
+    padding-top: 3.5rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.75rem, 7vw, 4.5rem);
+  }
+
+  .hero-copy > p {
+    max-width: none;
+    font-size: 1.2rem;
+  }
+
+  .hero-art {
+    top: 25rem;
+    right: 1rem;
+    width: 25rem;
+  }
+
+  .hero-inner {
+    min-height: 42rem;
+  }
+
+  .order-form {
+    margin-top: 1.5rem;
+  }
+
+  .flash-grid, .steps, .restaurant-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5rem 1.25rem;
+  }
+
+  .flash-deals, .how-it-works, .section-space, .search-food, .details, .benefits {
+    padding-block: 3.5rem;
+  }
+
+  h2 {
+    font-size: 2.125rem;
+    line-height: 1.12;
+  }
+
+  .flash-card h3 {
+    margin-top: 1.25rem;
+  }
+
+  .badge {
+    font-size: 1.125rem;
+    padding-inline: 0.75rem;
+  }
+
+  .discount {
+    height: 4rem;
+    padding: 0.5rem 0.875rem;
+  }
+
+  .discount > strong {
+    font-size: 3.25rem;
+  }
+
+  .discount b {
+    font-size: 1.625rem;
+  }
+
+  .discount > span > span {
+    font-size: 1rem;
+  }
+
+  .steps {
+    gap: 3rem 2rem;
+  }
+
+  .step-icon {
+    margin-bottom: 1.5rem;
+  }
+
+  .step p {
+    font-size: 1rem;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.5rem 1rem;
+  }
+
+  .product-grid, .restaurant-grid {
+    margin-top: 2.75rem;
+  }
+
+  .product-card h3, .product-location, .price {
+    font-size: 1.125rem;
+  }
+
+  .product-card .button {
+    padding-inline: 0.5rem;
+  }
+
+  .restaurant-info h3 {
+    font-size: 1.375rem;
+  }
+
+  .restaurant-labels {
+    top: 1.25rem;
+    left: 1.25rem;
+  }
+
+  .view-all-button {
+    margin-top: 3rem;
+  }
+
+  .section-header {
+    align-items: center;
+  }
+
+  .category-controls {
+    gap: 1rem;
+    padding-right: 0;
+  }
+
+  .category-controls > a {
+    display: none;
+  }
+
+  .arrow {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.4rem;
+  }
+
+  .arrows {
+    gap: 0.625rem;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .food-category h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .benefit-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+    width: min(30rem, calc(100% - 2.5rem));
+    padding: 2.5rem;
+    border-radius: 2rem;
+  }
+
+  .benefit {
+    gap: 2rem;
+  }
+
+  .benefit + .benefit {
+    padding-top: 2rem;
+    border-top: 1px solid #ddd;
+  }
+
+  .benefit + .benefit::before {
+    display: none;
+  }
+
+  .benefit h3 {
+    font-size: 2rem;
+  }
+
+  .benefit > img {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .detail-list {
+    gap: 3rem;
+  }
+
+  .detail-card, .detail-card-reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-card .detail-photo {
+    grid-column: 1;
+    grid-row: 1;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 961 / 512;
+  }
+
+  .detail-card .detail-content {
+    grid-column: 1;
+    padding: 2rem;
+  }
+
+  .detail-content > div {
+    margin-bottom: 2rem;
+  }
+
+  .detail-content h2 {
+    font-size: 2.125rem;
+  }
+
+  .detail-content h2 br {
+    display: none;
+  }
+
+  .order-banner {
+    min-height: 24rem;
+    background-size: auto 345.3202%;
+    background-position: center;
+  }
+
+  .order-banner h2 {
+    font-size: 3rem;
+  }
+
+  .banner-button {
+    margin-top: 2.5rem;
+  }
+
+  .site-footer {
+    padding-block: 3.5rem 2rem;
+  }
+
+  .city-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.5rem 1rem;
+  }
+
+  .footer-middle {
+    flex-direction: column;
+    padding-block: 2.5rem;
+  }
+
+  .footer-menus {
+    width: 100%;
+  }
+
+  .footer-subscription {
+    width: min(100%, 30.1875rem);
+  }
+
+  .footer-menu ul {
+    margin-top: 1.5rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 1.5rem;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container, .container {
+    width: calc(100% - 2rem);
+  }
+
+  .nav-actions {
+    gap: 0.875rem;
+  }
+
+  .search-link > span:last-child {
+    display: none;
+  }
+
+  .delivery-address > span:last-child {
+    font-size: 0.8rem;
+  }
+
+  .hero, .hero-inner {
+    min-height: 45rem;
+  }
+
+  .hero-copy {
+    padding-top: 2.5rem;
+  }
+
+  .hero-copy > p {
+    font-size: 1.125rem;
+  }
+
+  .order-tabs {
+    padding: 1rem;
+  }
+
+  .order-tab {
+    padding-inline: 1rem;
+  }
+
+  .order-fields {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+  }
+
+  .address-field {
+    min-height: 3.25rem;
+  }
+
+  .find-button {
+    width: 100%;
+  }
+
+  .hero-art {
+    top: 30rem;
+    right: -1rem;
+    width: 22rem;
+  }
+
+  .flash-grid, .restaurant-grid {
+    gap: 2rem 0.875rem;
+  }
+
+  .flash-card h3 {
+    font-size: 1.125rem;
+  }
+
+  .badge {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.2;
+  }
+
+  .steps {
+    gap: 2.5rem 1rem;
+  }
+
+  .step-icon, .step-icon img {
+    height: 5rem;
+  }
+
+  .step h3 {
+    font-size: 1.125rem;
+  }
+
+  .step p {
+    font-size: 0.9375rem;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .product-card h3 {
+    min-height: 2.7rem;
+  }
+
+  .product-location {
+    gap: 0.375rem;
+    font-size: 1rem;
+  }
+
+  .restaurant-labels {
+    top: 0.5rem;
+    left: 0.5rem;
+    gap: 0.25rem;
+    font-size: 0.875rem;
+  }
+
+  .restaurant-labels > span {
+    gap: 0.25rem;
+    padding: 0.375rem;
+  }
+
+  .restaurant-labels .icon {
+    font-size: 0.75rem;
+  }
+
+  .restaurant-info {
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    min-height: 4rem;
+  }
+
+  .restaurant-logo {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .restaurant-info h3 {
+    font-size: 1rem;
+  }
+
+  .rating {
+    font-size: 1.125rem;
+  }
+
+  .restaurant-card > .badge {
+    margin-top: 1rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .arrow {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.125rem;
+  }
+
+  .category-grid {
+    gap: 1.75rem 0.75rem;
+  }
+
+  .food-category h3 {
+    font-size: 0.95rem;
+  }
+
+  .benefit-card {
+    padding: 2rem;
+  }
+
+  .benefit {
+    gap: 1.5rem;
+  }
+
+  .benefit > img {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .benefit h3 {
+    font-size: 1.75rem;
+  }
+
+  .detail-card .detail-content {
+    padding: 1.5rem;
+  }
+
+  .detail-content p {
+    font-size: 1rem;
+  }
+
+  .order-banner h2 {
+    font-size: 2.5rem;
+  }
+
+  .city-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-menus {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5rem 1rem;
+  }
+
+  .footer-menu li, .city-grid li {
+    font-size: 1rem;
+  }
+
+  .footer-menu:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .footer-subscription > p {
+    font-size: 1rem;
+  }
+
+  .subscribe-form label {
+    gap: 0.5rem;
+    padding-inline: 0.75rem;
+  }
+
+  .subscribe-form input {
+    font-size: 1rem;
+  }
+
+  .subscribe-form .button {
+    width: 7rem;
+    font-size: 1rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
+
+  .footer-bottom p {
+    gap: 0.4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
